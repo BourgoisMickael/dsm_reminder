@@ -12,8 +12,8 @@ if [[ -z "$DSM_REMINDER_WORKDIR" ]]; then
     exit 1
 fi
 
-DAY=$(date +%A)
-if [ $DAY == 'Monday' ]; then
+DAY=$(date +%u)
+if [ $DAY == '1' ]; then # Monday
     SINCE='3 days'
 else
     SINCE='1 day'
